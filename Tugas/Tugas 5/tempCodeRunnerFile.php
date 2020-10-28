@@ -2,7 +2,7 @@
     require "koneksi.php";
 
 	global $conn;
-	$biodata = query("SELECT * FROM biodata;");
+	$personal = query("SELECT * FROM biodata;");
 	$edukasi = query("SELECT * FROM edukasi;");
 	$movie = query("SELECT * FROM movie;");
 	$skill = query("SELECT * FROM skill;");
@@ -16,6 +16,7 @@
     $knowledge = "I’m Computer Science Student Who Interest On";
     $contact1 = "Contact";
     $contact= "FIND ME ON";
+    $biodata = ["Dwi Wahyu Effendi"];
     $pendidikanku = ["SDN SIWALANKERTO III / 419", "SMPN 36 SURABAYA", "SMA KEMALA BHAYANGKARI 1 SURABAYA", "UPN VETERAN JAWA TIMUR"];
     $tahunsekolah = ["2006-2012", "2012-2015", "2015-2018", "2018-Now"];
     $film = ["3 Idiots", "Doctor Strange", "Money Heist"];
@@ -48,7 +49,7 @@
         <img class="foto" src="Image/Home/myphoto.jpg">
         <div class="Home">
             <table cellspacing="0" cellpadding="-50">
-            <h1>Dwi Wahyu Effendi</h1>
+            <h1><?= "$biodata[0]"; ?></h1>
             
             <?php foreach($biodata as $bio) : ?>
 				<tr>
