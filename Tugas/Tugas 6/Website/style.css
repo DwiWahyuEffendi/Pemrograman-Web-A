@@ -1,0 +1,215 @@
+body{
+    background-color:#E3F7FE;
+    font-family: sans-serif;
+}
+
+.menu{
+    margin-top: -40px;
+    margin-right: 60px;
+}
+
+.menu ul{
+	float: right;
+ 	display: inline-flex;
+    margin: 50px;
+}
+
+.menu ul li{
+	display: inline-block;
+ 	list-style-type: none;
+ 	list-style: none;
+ 	margin: 0 10px;
+ 	color:#FEFCF3;
+    cursor: pointer;
+}
+
+.menu ul li a{
+    color:black;
+    text-decoration: none;
+    font-size: 25PX;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.foto{
+    margin-top: -150px;
+    margin-left: 40px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.Home h1{
+    margin-top: -120px;
+    margin-bottom: 10px;
+    margin-left: 140px;
+    font-size: 30px;
+}
+
+.Home tr{
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
+.Home tr td img{
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 140px;
+}
+
+.Home tr td h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: -40px;
+    font-size: 20PX;
+}
+
+.banner{
+	top: 40%;
+	left: 130px;
+	position: absolute;
+	color: #586a74;
+}
+
+.app-text{
+	top: 30px;
+    margin-top: -130px;
+	padding-top: -100px;
+	padding-left:20px;
+	width: 200px;
+	float: right;
+	color: #333333;
+}
+
+.app-text h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+	padding-left: 500px;
+	font-size: 60px;
+	width: 640px; 
+    color: #333333;
+    font-family: Share Tech;
+} 
+
+.title hr{
+    margin-top: 10px;
+    margin-left: 300px;
+    padding-left: 700px;
+    border-width: 2px;
+    border-color: black;   
+}
+
+.title h1{
+    margin-left: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 150px;
+    width: 400px;
+    font-size: 30px;
+    font-family: Share Tech;
+    color: black;
+}
+
+.title p{
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-left: 50px;
+    width: 600px;
+    font-size: 20px;
+    font-family: Roboto;
+    color: black;
+}
+
+#edu{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px; font-family: Share Tech; color: black;
+}
+
+.garis hr{
+    border-width: 2px;
+    border-color: black;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.pendidikan tr td img{
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 110px;
+}
+
+.pendidikan tr td p b{
+    float: left;
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+.movie{
+    margin-top: 400px;
+}
+
+.movie h2{
+    text-align: center;
+    width: 100%;
+    font-size: 30px; font-family: Share Tech; color: black;
+}
+
+.filmku tr td img{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 150px;
+    height: 200px;
+}
+
+.filmku tr td p{
+    margin-top: -20px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.pengetahuanku hr{
+    border-width: 2px;
+    border-color: black; 
+}
+
+.pengetahuanku tr td img{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 150px;
+}
+
+.pengetahuanku tr td p{
+    margin-top: 0px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.kontak h2{
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    font-size: 80px;
+    font-family: Share Tech;
+}
+
+.kontakku tr td img{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 120px;
+}
