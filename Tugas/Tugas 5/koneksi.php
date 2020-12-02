@@ -7,9 +7,6 @@
 
 	   $conn = mysqli_connect($dbServer, $dbUser, $dbPass, $dbName);
 
-	   if(!$conn)
-		  die('Koneksi anda gagal: ' . mysqli_error());
-
 	   mysqli_select_db($conn,$dbName);
 	   return $conn;
 	}

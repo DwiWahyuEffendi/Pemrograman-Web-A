@@ -1,6 +1,6 @@
 CREATE TABLE `websitecv`.`biodata` ( 
 `id` INT NOT NULL AUTO_INCREMENT , 
-`ttl` VARCHAR(50) NOT NULL , 
+`ttl` DATE NOT NULL , 
 `kota` VARCHAR(50) NOT NULL , 
 `telpon` VARCHAR(50) NOT NULL , 
 `email` VARCHAR(50) NOT NULL , 
@@ -9,7 +9,7 @@ CREATE TABLE `websitecv`.`biodata` (
 PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 INSERT INTO `biodata` (`id`, `ttl`, `kota`, `telpon`, `email`, `github`, `linkedin`)
-VALUES (NULL, '31 May 2000', 'Surabaya', '081234764444', 'dwe22@gmail.com', 'dwiwahyueffendi', 'dwiwahyueffendi')
+VALUES (NULL, '2000-05-31', 'Surabaya', '081234764444', 'dwe22@gmail.com', 'dwiwahyueffendi', 'dwiwahyueffendi')
 
 CREATE TABLE `websitecv`.`edukasi` ( 
 `id` INT NOT NULL AUTO_INCREMENT , 

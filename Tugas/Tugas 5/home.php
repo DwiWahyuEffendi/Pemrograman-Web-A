@@ -10,17 +10,12 @@
 
 <?php
     $home = "Home";
-    $edukasi = "Education";
+    $edukasiku = "Education";
     $movie = "Favorite Movie";
     $knowledge1 = "Knowledge";
     $knowledge = "I’m Computer Science Student Who Interest On";
     $contact1 = "Contact";
     $contact= "FIND ME ON";
-    $pendidikanku = ["SDN SIWALANKERTO III / 419", "SMPN 36 SURABAYA", "SMA KEMALA BHAYANGKARI 1 SURABAYA", "UPN VETERAN JAWA TIMUR"];
-    $tahunsekolah = ["2006-2012", "2012-2015", "2015-2018", "2018-Now"];
-    $film = ["3 Idiots", "Doctor Strange", "Money Heist"];
-    $tahunfilm = ["2009", "2016", "2019"];
-    $minat = ["Linux Enthusiast", "Backend Developer", "Artificial Intelligence", "Mobile Developer"];
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +29,10 @@
     </head>
 
     <body>
-	<div class="container">
 		<div class="menu">
 			<ul>
 				<li><a href="#Home"><?php echo $home?></a></li>
-				<li><a href="#Education"><?php echo $edukasi?></a></li>
+				<li><a href="#Education"><?php echo $edukasiku?></a></li>
 				<li><a href="#Favorite-Movie"><?php echo $movie?></a></li>
                 <li><a href="#Knowledge"><?php echo $knowledge1?></a></li>
                 <li><a href="#Contact"><?php echo $contact1?></a></li>
@@ -94,131 +88,91 @@
 			</div>
         </div>
         
-        <div class="Education">
-		<h2 id="edu"><?php echo $edukasi?></h2>
-			<div class="pendidikan">
-                <table align="center">
-                    <tr align="center">
-                        <td><img src="Image/Home/logosd.png"></td>
-                        <td><img src="Image/Home/logosmp.png"></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$pendidikanku[0]"; ?></p></td>
-                        <td><p><?= "$pendidikanku[1]"; ?></p></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$tahunsekolah[0]"; ?></p></td>
-                        <td><p><?= "$tahunsekolah[1]"; ?></p></td>
-                    </tr>
-                    <tr align="center">
-                        <td><img src="Image/Home/logosma.png"></td>
-                        <td><img src="Image/Home/logos1.png"></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$pendidikanku[2]"; ?></p></td>
-                        <td><p><?= "$pendidikanku[3]"; ?></p></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$tahunsekolah[2]"; ?></p></td>
-                        <td><p><?= "$tahunsekolah[3]"; ?></p></td>
-                    </tr>
-                </table>
-			</div>
+        <div class="garis">
+        <hr style="border-width: 2px; border-color: black; margin-right: 300px; margin-left: 300px;">
+        <h2 id="edu" align="center" style="font-size: 30px; font-family: Share Tech; color: black; margin-top: 0px; margin-bottom: 0px;">
+            <?php echo $edukasiku?>
+        </h2>
+        <hr style="border-width: 2px; border-color: black; margin-right: 300px; margin-left: 300px;">
+        <table align="center" border="0">
+              <tbody>
+                <?php 
+                  $query = "SELECT * FROM edukasi";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
+
+                 <?php while($data = mysqli_fetch_array($result)): ?>
+                 <div class="educat">
+                  <tr>
+                    <td style="padding: 0 20px"><img width="70px" src="<?= $data["logo"];?>"></td>
+                    <td>
+                        <div class="jarak">
+                        <p align="center" style="padding: 0 10px"><b><?= $data["jenjang"]; ?></b></p>
+                        <p align="center" style="padding: 0 10px"><b><?= $data["tahun"]; ?></b></p>
+                        </div>
+                    </td>
+                  </tr>
+                  </div>
+                 <?php endwhile ?>
+              </tbody>
+            </table>   
         </div>
         
+
         <div class="movie">
-        <h2 id="film"><?php echo $movie?></h2>
-            <div class="filmku"></div>
-                <table align="center">
-                    <tr align="center">
-                        <td><img src="Image/Home/3idiot.png"></td>
-                        <td><img src="Image/Home/doctorstrang.png"></td>
-                        <td><img src="Image/Home/moneyheis.png"></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$film[0]"; ?></p></td>
-                        <td><p><?= "$film[1]"; ?></p></td>
-                        <td><p><?= "$film[2]"; ?></p></td>
-                    </tr>
-                    <tr align="center">
-                        <td><p><?= "$tahunfilm[0]"; ?></p></td>
-                        <td><p><?= "$tahunfilm[1]"; ?></p></td>
-                        <td><p><?= "$tahunfilm[2]"; ?></p></td>
-                    </tr>
-                </table>
-            </div>
+        <hr style="border-width: 2px; border-color: black; margin-right: 300px; margin-left: 300px;">
+        <h2 id="film" align="center" style="font-size: 30px; font-family: Share Tech; color: black; margin-top: 0px; margin-bottom: 0px;">
+        <?php echo $movie?>
+        </h2>
+        <hr style="border-width: 2px; border-color: black; margin-right: 300px; margin-left: 300px;">
+        <table align="center" border="0">
+              <tbody>
+                <?php 
+                  $query = "SELECT * FROM movie";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
+
+                 <?php while($data = mysqli_fetch_array($result)): ?>
+                 <div class="filmku">
+                  <tr>
+                    <td style="padding: 0 20px"><img width="90px" height="120px" src="<?= $data["poster"];?>"></td>
+                    <td>
+                        <p align="center" style="padding: 0 10px"><b><?= $data["film"]; ?></b></p>
+                        <p align="center" style="padding: 0 10px"><b><?= $data["rilis"]; ?></b></p>
+                    </td>
+                  </tr>
+                  </div>
+                 <?php endwhile ?>
+              </tbody>
+            </table>
         </div>
 
-    	<div class="Knowledge">
-		<h1 align="center" id="pengetahuan"><?php echo $knowledge?></h2>
-        <div class="pengetahuanku">
-            <hr>
-            <table align="center">
-                <tr align="center">
-                    <td><img src="Image/Home/linux.png"></td>
-                    <td><img src="Image/Home/backend.png"></td>
-                    <td><img src="Image/Home/brain.png"></td>
-                    <td><img src="Image/Home/android.png"></td>
-                </tr>
-                <tr align="center">
-                    <td><h1><?= "$minat[0]"; ?></h1></td>
-                    <td><h1><?= "$minat[1]"; ?></h1></td>
-                    <td><h1><?= "$minat[2]"; ?></h1></td>
-                    <td><h1><?= "$minat[3]"; ?></h1></td>
-                </tr>
-                <tr align="left">
-                    <td><p>I am a big fan of the Linux
-operating system. Because of
-what? because Linux is open
-source and runs on any device.
-My laptop uses the Ubuntu
-distro
-that I use to work on
-projects.
-Because this OS is
-easier to use
-and I like it more
-than others.</p></td>
-                    <td><p>Back-end developers primarily
-develop and maintain the core
-functional logic and operations
-of a software application or
-information system. Typically, a
-back-end developer has expert
-programming skills in Java,
-Kotlin and other high-level
-programming languages.
-</p></td>
-                    <td><p>Sometimes called machine intelligence,
-is intelligence demonstrated by 
-machines,
-unlike the natural intelligence
-displayed
- by humans and animals.
-Colloquially, the
-term "artificial
-intelligence" is often
-used to describe
-machines (or computers) that mimic
-"cognitive" functions that humans
-associate with the human mind, such
-as "learning"
-and "problem solving".</p></td>
-                    <td><p>A mobile developer creates software
-for mobile devices and technology.
-Whether for an Android, Apple or
-Windows
-platform, a mobile
-developer must learn
-the software
-development environment
-and
-programming languages for their
-chosen platform.</p></td>
-                </tr>
+        <div class="Knowledge">
+        <h2 id="pengetahuan" align="center" style="font-size: 30px; font-family: Share Tech; color: black; margin-top: 100px;">
+        <?php echo $knowledge?>
+        </h2>
+        <hr style="border-width: 2px; border-color: black;">
+        <table align="center" border="0" style="margin-right: 200px; margin-left: 200px;">
+              <tbody>
+                <?php 
+                  $query = "SELECT * FROM skill";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
+
+                 <?php while($data = mysqli_fetch_array($result)): ?>
+                 <div class="pengetahuanku">
+                  <tr>
+                    <td style="padding: 0 20px"><img width="120px" src="<?= $data["gambar"];?>"></td>
+                    <td>
+                        <p align="center" style="padding: 0 10px; font-size: 20px"><b><?= $data["jenis"]; ?></b></p>
+                        <p align="left" style="padding: 0 10px"><b><?= $data["keterangan"]; ?></b></p>
+                    </td>
+                  </tr>
+                  </div>
+                 <?php endwhile ?>
+              </tbody>
             </table>
-		</div>
-	</div>
+        </div>
 
 	<div class="kontak">
 		<h2 id="contactme"><?php echo $contact?></h2>
@@ -239,6 +193,6 @@ chosen platform.</p></td>
                 </tr>
             </table>
 		</div>
-	</div>
+    </div>
     </body>
 </html>
